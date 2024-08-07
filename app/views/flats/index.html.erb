@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="banner d-flex justify-content-between align-items-center p-3 mb-3 bg-light">
+  <!-- Heading and Add Flat Button -->
+  <div class="d-flex align-items-center">
+    <h4 class="mb-0 me-3">Simple AirBnb</h4>
+    <%= link_to 'Add Flat', new_flat_path, class: 'btn btn-primary' %>
+  </div>
+    <div class="d-flex align-items-center">
+    <!-- Search Form -->
+    <%= simple_form_for :search, url: search_flats_path, method: :get, html: { class: 'd-flex align-items-center me-3' } do |f| %>
+      <%= f.input :search, placeholder: 'Search flats...', label: false, input_html: { class: 'form-control me-2' } %>
+      <%= f.button :submit, 'Search', class: 'btn btn-secondary' %>
+    <% end %>
+  </div>
+
+</div>
+</div>
+
+<h1>Flats</h1>
+
+<div id="flats">
+  <% @flats.each do |flat| %>
+    <%= render flat %>
+    <p>
+      <%= link_to "Show this flat", flat %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New flat", new_flat_path %>

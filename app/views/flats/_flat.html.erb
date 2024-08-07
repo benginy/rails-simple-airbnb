@@ -1,0 +1,35 @@
+<div id="<%= dom_id flat %>">
+
+<div class="baner">
+  <%= image_tag 'image1.png', alt: 'Description of the image', class: 'img-fluid' %>
+</div>
+
+<div class="flat-main" style="text-align: left; background-color: lightgrey;">
+  <p class="font-size+1 font-style-bold">
+    <strong>Name:</strong>
+    <%= flat.name %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= flat.address %>
+  </p>
+</div>
+
+
+  <p>
+    <strong>Description:</strong>
+    <%= flat.description %>
+  </p>
+
+  <p>
+    <strong>Price per night:</strong>
+    <%= flat.price_per_night %>
+  </p>
+
+  <p>
+    <strong>Number of guests:</strong>
+    <%= flat.number_of_guests %>
+  </p>
+
+</div>
