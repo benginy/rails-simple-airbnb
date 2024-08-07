@@ -15,11 +15,13 @@
  */
 
  .banner {
-  overflow: hidden; /* Ensures content does not overflow */
+  text-align: center;
+  margin: 20px 0;
 }
 
 .banner img {
-  width: 100%; /* Full width */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
   max-height: 400px; /* Adjust height as needed */
+  object-fit: cover; /* Ensures image covers the container without distortion */
 }
